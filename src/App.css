@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --black: #111111;
+  --dark-gray: #1A1A1A;
+  --gray: #333333;
+  --light-gray: #666666;
+  --accent: #808080;
+  --accent-hover: #999999;
+  --white: #080808;
+  --red: #ff3a3a;
+  --gradient-black: linear-gradient(135deg, #111111, #1A1A1A);
+  --glass-gradient: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--gradient-black);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .hero-text {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: var(--glass-gradient);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary {
+  background: var(--glass-gradient), var(--accent);
+  color: var(--white);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--glass-gradient), var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 58, 58, 0.2);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  background: linear-gradient(to right, var(--white), var(--red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background: var(--red);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 58, 58, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 58, 58, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.animate-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glossy {
+  position: relative;
+  background: var(--glass-gradient);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glossy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .app {
+    padding-top: 60px;
+  }
+}
+
+/* Add transition for smoother sidebar appearance */
+.sidebar {
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar-content {
+    transition: opacity 0.2s ease;
+  }

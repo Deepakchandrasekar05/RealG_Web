@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/RealG logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RealG</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+  rel="stylesheet"
+  />
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBwEVnFhv5uPocVQqG2xqjof2XDp47qDGc",
+        authDomain: "realg-website.firebaseapp.com",
+        projectId: "realg-website",
+        storageBucket: "realg-website.firebasestorage.app",
+        messagingSenderId: "314448647871",
+        appId: "1:314448647871:web:985885688aa434fc50d80a",
+        measurementId: "G-EEGGSXB25M"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+  </body>
+</html>
