@@ -8,7 +8,7 @@ This project is a comprehensive construction safety monitoring system. It provid
 
 ## Features
 
-*   **Real-time Dashboard**: A central dashboard to view all monitoring data in one place.
+*   **Real-time Dashboard**: A centralized dashboard to view all monitoring data in one place.
 *   **CCTV Monitoring**: Live monitoring of construction sites using CCTV cameras.
 *   **AI-Powered Safety Detection**: A YOLO-based machine learning model to detect:
     *   PPE violations (e.g., no hardhat, no mask, no safety vest).
